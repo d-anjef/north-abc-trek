@@ -255,9 +255,9 @@ This project is licensed under the **MIT License** — see the [LICENSE](./LICEN
 
 **Anjef Dangol** — Developer & Expedition Member
 
-- 🌐 Website: [Coming Soon]
+- 🌐 Website: https://www.anjef.com.np/
 - 📸 Instagram: [@anjef.dangol](https://instagram.com/anjef.dangol)
-- 💼 GitHub: [@YOUR_USERNAME](https://github.com/YOUR_USERNAME)
+- 💼 GitHub: [@YOUR_USERNAME](https://github.com/d-anjef)
 
 ---
 
