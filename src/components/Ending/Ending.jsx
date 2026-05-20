@@ -69,7 +69,7 @@ export default function Ending() {
         <div className="end__animate end__rule" />
 
         <p className="end__animate end__quote">
-          "From the chaos of Thamel to the silence of Panchakunda,
+          "From the chaos of Taukhel to the silence of Panchakunda,North ABC was never just a trek. It was 10 people choosing the hard thing together, and being better for it."
           from terrifying jeep roads to sacred lakes at altitude —
           this was never just a trek. It was 10 people choosing
           the hard thing together, and being better for it."

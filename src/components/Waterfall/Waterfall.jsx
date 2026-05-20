@@ -54,12 +54,12 @@ export default function Waterfall() {
           <div className="wf__animate wf__rule" />
           <p className="wf__animate wf__desc">
             After two hours of trekking from Humkhola through terrain that
-            tested every step, the trail opened. The sound came first — distant
+            tested every step, the trail opened. The sound came first  distant
             thunder of falling water. Then the sight: Phutphute Waterfall.
           </p>
           <p className="wf__animate wf__desc">
             We stopped. Took tea. Took photos. Took breath. This is the moment
-            every Annapurna trekker remembers — the first reward.
+            every Annapurna trekker remembers the first reward.
           </p>
 
           <div className="wf__animate wf__meta">
@@ -73,7 +73,7 @@ export default function Waterfall() {
             </div>
             <div className="wf__meta-item">
               <span className="wf__meta-label">Activity</span>
-              <span className="wf__meta-value">Tea Break · Photos</span>
+              <span className="wf__meta-value">Tea Break · Photos · Videos</span>
             </div>
           </div>
         </div>

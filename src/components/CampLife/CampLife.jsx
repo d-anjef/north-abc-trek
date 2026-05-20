@@ -28,10 +28,10 @@ const CAMP_MOMENTS = [
   {
     id: 3,
     icon: '🃏',
-    title: 'UNO Championships',
+    title: 'Marriage Championships',
     subtitle: 'Day 3 · Panchakunda',
-    story: 'The cold wind kicked in by afternoon. Everyone retreated into the tents. UNO came out. Cards flew. Voices rose. Friendships were tested. It was glorious.',
-    photos: ['/images/uno.jpg'],
+    story: 'The cold wind kicked in by afternoon. Everyone retreated into the tents, playing cards came out. Cards flew. Voices rose. Friendships were tested. It was glorious.',
+    photos: ['/images/marriage-champ.jpg'],
     color: '#a8c8d8',
   },
   {

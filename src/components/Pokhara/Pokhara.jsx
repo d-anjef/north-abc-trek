@@ -46,16 +46,16 @@ export default function Pokhara() {
           {/* Story */}
           <div className="pkh__story">
             <div className="pkh__animate pkh__incident">
-              <h3>The Incident 😂</h3>
+              <h3>The Fun Incident 😂</h3>
               <p>
                 We thought the hardest part was behind us. Five days of trekking,
-                dangerous jeep roads, altitude headaches — all done. Just a relaxing
-                2 hours on Phewa Lake. Three boats. One big boat for most of us.
-                A kayak. And a paddle boat.
+                dangerous jeep roads, altitude headaches  all done. Just a relaxing
+                2 hours on Phewa Lake. Three boats. One big boat for most of us,
+                A kayak, And a paddle boat.
               </p>
               <p>
                 The paddle boat duo decided standing up was a good idea.
-                Playing around. Laughing. Then — splash. One person in the water.
+                Playing around. Laughing. Then  splash. One person in the water.
               </p>
               <p>
                 The kayaker, ever the hero, rows over to help. Gets too close.
