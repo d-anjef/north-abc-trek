@@ -62,8 +62,8 @@ export const MAP_POINTS = [
     y: 42,
     photos: [
       { src: '/images/day2/phutphute-1.jpg', caption: 'Phutphute Waterfall' },
-      { src: '/images/day2/phutphute-2.jpg', caption: 'Group at Phutphute' },
-      { src: '/images/day2/phutphute-3.jpg', caption: 'At the falls' },
+      { src: '/images/day2/phutphute-2.jpg', caption: 'At the falls' },
+      { src: '/images/day2/phutphute-3.jpg', caption: 'Group at Phutphute' },
     ],
     color: '#4a90d8',
     description: 'The waterfall that made every step worth it. Tea break, photos, pure joy.',
