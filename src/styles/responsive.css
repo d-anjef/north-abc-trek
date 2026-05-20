@@ -1,0 +1,24 @@
+/* ===== RESPONSIVE BREAKPOINTS ===== */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  :root {
+    --space-section: clamp(4rem, 10vh, 8rem);
+  }
+}
+
+/* Mobile Large */
+@media (max-width: 768px) {
+  :root {
+    --space-section: clamp(3rem, 8vh, 6rem);
+    --glass-blur: 12px;
+  }
+}
+
+/* Mobile Small */
+@media (max-width: 480px) {
+  :root {
+    --space-section: clamp(2rem, 6vh, 4rem);
+    --glass-blur: 8px;
+  }
+}

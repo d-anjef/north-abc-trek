@@ -1,0 +1,193 @@
+/* ============================================================
+   NORTH ABC EXPEDITION — Global Styles
+   Warm cinematic + personal adventure feel
+   ============================================================ */
+
+:root {
+  /* Fonts */
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body:    'Space Grotesk', system-ui, sans-serif;
+  --font-mono:    'Space Mono', monospace;
+
+  /* Colours — warm mountain palette */
+  --c-bg:       #080810;
+  --c-bg2:      #0d0d18;
+  --c-bg3:      #12121f;
+  --c-warm:     #1a1208;
+  --c-text:     #f0ece4;
+  --c-text2:    #c8bfb0;
+  --c-text3:    #7a7060;
+  --c-gold:     #d4a574;
+  --c-gold2:    #c8875f;
+  --c-orange:   #e8956a;
+  --c-warm-red: #c85a3a;
+  --c-ice:      #a8c8d8;
+  --c-snow:     #e8e4de;
+  --c-forest:   #2d4a3e;
+  --c-glass:    rgba(255,255,255,0.04);
+  --c-glass-b:  rgba(255,255,255,0.08);
+
+  /* Type scale */
+  --fs-hero: clamp(3rem, 8vw, 9rem);
+  --fs-h1:   clamp(2.2rem, 5vw, 5rem);
+  --fs-h2:   clamp(1.8rem, 4vw, 3.5rem);
+  --fs-h3:   clamp(1.4rem, 3vw, 2.2rem);
+  --fs-h4:   clamp(1.1rem, 2vw, 1.6rem);
+  --fs-body: clamp(1rem, 1.2vw, 1.15rem);
+  --fs-sm:   0.9rem;
+  --fs-xs:   0.75rem;
+  --fs-micro:0.65rem;
+
+  /* Spacing */
+  --sp-xs:  0.5rem;
+  --sp-sm:  1rem;
+  --sp-md:  2rem;
+  --sp-lg:  4rem;
+  --sp-xl:  6rem;
+  --sp-2xl: 10rem;
+  --sp-sec: clamp(5rem, 12vh, 10rem);
+
+  /* Motion */
+  --ease-out:      cubic-bezier(0.19, 1, 0.22, 1);
+  --ease-cinematic:cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out:   cubic-bezier(0.76, 0, 0.24, 1);
+
+  /* Layout */
+  --max-w:     1400px;
+  --content-w: 1100px;
+  --narrow-w:  760px;
+
+  /* Misc */
+  --radius-sm:   8px;
+  --radius-md:   14px;
+  --radius-lg:   24px;
+  --radius-xl:   40px;
+  --radius-full: 9999px;
+}
+
+/* Reset */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  scroll-behavior: auto;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--c-bg);
+  color: var(--c-text);
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+img  { display: block; max-width: 100%; height: 100%; object-fit: cover; }
+a    { color: inherit; text-decoration: none; }
+
+::selection { background: rgba(212,165,116,.3); color: var(--c-text); }
+
+::-webkit-scrollbar       { width: 3px; }
+::-webkit-scrollbar-track { background: var(--c-bg); }
+::-webkit-scrollbar-thumb { background: rgba(212,165,116,.4); border-radius: 99px; }
+
+/* Keyframes */
+@keyframes fadeUp    { from{opacity:0;transform:translateY(50px)} to{opacity:1;transform:translateY(0)} }
+@keyframes fadeIn    { from{opacity:0} to{opacity:1} }
+@keyframes float     { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-12px)} }
+@keyframes pulse     { 0%,100%{opacity:.6;transform:scale(1)} 50%{opacity:1;transform:scale(1.04)} }
+@keyframes shimmer   { 0%{background-position:-200% center} 100%{background-position:200% center} }
+@keyframes spin      { from{transform:rotate(0deg)} to{transform:rotate(360deg)} }
+@keyframes starBlink { 0%,100%{opacity:.2} 50%{opacity:1} }
+@keyframes pathDraw  { from{stroke-dashoffset:var(--len,2000)} to{stroke-dashoffset:0} }
+@keyframes ripple    { 0%{transform:scale(0);opacity:1} 100%{transform:scale(4);opacity:0} }
+@keyframes campfire1 { 0%,100%{transform:scaleY(1) rotate(-3deg);opacity:.9} 50%{transform:scaleY(1.2) rotate(3deg);opacity:1} }
+@keyframes campfire2 { 0%,100%{transform:scaleY(.9) rotate(2deg)} 50%{transform:scaleY(1.15) rotate(-2deg)} }
+@keyframes boatRock  { 0%,100%{transform:rotate(-3deg)} 50%{transform:rotate(3deg)} }
+@keyframes waterFlow { 0%{background-position:0 0} 100%{background-position:0 100%} }
+@keyframes fogMove   { 0%,100%{transform:translateX(0) scaleX(1);opacity:.3} 50%{transform:translateX(3%) scaleX(1.03);opacity:.5} }
+@keyframes glowPulse { 0%,100%{box-shadow:0 0 20px rgba(212,165,116,.15)} 50%{box-shadow:0 0 50px rgba(212,165,116,.4)} }
+
+
+/* ============================================================
+   RESPONSIVE BREAKPOINTS — All Devices
+   ============================================================ */
+
+/* ───────── TABLET LANDSCAPE (1024px and below) ───────── */
+@media (max-width: 1024px) {
+  :root {
+    --sp-section: clamp(4rem, 10vh, 8rem);
+    --sp-xl: 4rem;
+    --sp-2xl: 6rem;
+  }
+}
+
+/* ───────── TABLET PORTRAIT (768px and below) ───────── */
+@media (max-width: 768px) {
+  :root {
+    --sp-section: clamp(3rem, 8vh, 6rem);
+    --sp-lg: 3rem;
+    --sp-xl: 3.5rem;
+    --sp-2xl: 5rem;
+    --sp-md: 1.5rem;
+  }
+
+  html { font-size: 15px; }
+}
+
+/* ───────── MOBILE LARGE (640px and below) ───────── */
+@media (max-width: 640px) {
+  :root {
+    --sp-md: 1.25rem;
+    --sp-lg: 2.5rem;
+    --sp-xl: 3rem;
+  }
+
+  html { font-size: 14.5px; }
+}
+
+/* ───────── MOBILE SMALL (480px and below) ───────── */
+@media (max-width: 480px) {
+  :root {
+    --sp-md: 1rem;
+    --sp-sm: 0.75rem;
+    --sp-lg: 2rem;
+  }
+
+  html { font-size: 14px; }
+}
+
+/* ───────── REDUCED MOTION ───────── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ───────── TOUCH DEVICES — Remove hover effects ───────── */
+@media (hover: none) {
+  .gal__item:hover img,
+  .crew__card:hover,
+  .tl__photo:hover img,
+  .wf__photo:hover img,
+  .pkh__photo:hover img {
+    transform: none !important;
+  }
+
+  .gal__item-overlay,
+  .wf__photo-cap,
+  .tl__photo-cap {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+/* ───────── LANDSCAPE PHONE FIX ───────── */
+@media (max-width: 900px) and (orientation: landscape) and (max-height: 500px) {
+  .hero { min-height: 100vh; }
+  .hero__title { font-size: clamp(2rem, 6vw, 4rem); }
+  .hero__crew-preview { display: none; }
+}

@@ -1,0 +1,19 @@
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+
+export default defineConfig({
+  plugins: [react()],
+  assetsInclude: ['**/*.glb', '**/*.gltf'],
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          three:  ['three', '@react-three/fiber', '@react-three/drei'],
+          gsap:   ['gsap'],
+          motion: ['framer-motion'],
+        },
+      },
+    },
+    chunkSizeWarningLimit: 2000,
+  },
+});

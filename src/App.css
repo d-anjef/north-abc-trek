@@ -1,0 +1,8 @@
+.app { position:relative; min-height:100vh; }
+
+main { position:relative; z-index:10; }
+
+/* Section separator */
+section + section {
+  border-top: 1px solid rgba(255,255,255,.04);
+}

@@ -1,0 +1,8 @@
+.ndots { position:fixed; right:var(--sp-md); top:50%; transform:translateY(-50%); display:flex; flex-direction:column; gap:10px; z-index:100; }
+.ndot  { display:flex; align-items:center; gap:10px; flex-direction:row-reverse; cursor:default; }
+.ndot__c { width:7px; height:7px; border-radius:50%; background:rgba(255,255,255,.14); border:1px solid rgba(255,255,255,.08); transition:all .4s ease; flex-shrink:0; }
+.ndot--on .ndot__c { background:var(--c-gold); border-color:var(--c-gold); box-shadow:0 0 10px rgba(212,165,116,.5); transform:scale(1.4); }
+.ndot__l { font-family:var(--font-mono); font-size:.55rem; letter-spacing:.2em; color:var(--c-text3); text-transform:uppercase; opacity:0; transform:translateX(8px); transition:all .3s ease; white-space:nowrap; }
+.ndot:hover .ndot__l { opacity:1; transform:translateX(0); }
+.ndot--on .ndot__l  { color:var(--c-gold); }
+@media(max-width:768px){ .ndots{ display:none; } }

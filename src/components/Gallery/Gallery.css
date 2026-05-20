@@ -1,0 +1,91 @@
+.gal { position: relative; padding: var(--sp-sec) var(--sp-md); z-index: 10; }
+.gal__inner { max-width: var(--max-w); margin: 0 auto; }
+.gal__header { text-align: center; margin-bottom: var(--sp-xl); display: flex; flex-direction: column; align-items: center; gap: var(--sp-sm); }
+.gal__label  { font-family: var(--font-mono); font-size: var(--fs-micro); letter-spacing: .35em; color: var(--c-gold); text-transform: uppercase; }
+.gal__title  { font-family: var(--font-display); font-size: var(--fs-h2); color: var(--c-text); font-weight: 400; }
+.gal__title em { color: var(--c-gold); font-style: italic; }
+.gal__sub    { font-size: var(--fs-body); color: var(--c-text2); }
+
+.gal__filters { display: flex; gap: .5rem; flex-wrap: wrap; justify-content: center; margin-bottom: var(--sp-xl); padding: 0 var(--sp-sm); }
+.gal__filter  {
+  padding: .5rem 1.2rem; border-radius: var(--radius-full);
+  background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.08);
+  color: var(--c-text2); font-family: var(--font-mono); font-size: var(--fs-micro);
+  letter-spacing: .1em; cursor: pointer; transition: all .3s ease;
+}
+.gal__filter:hover   { background: rgba(255,255,255,.08); }
+.gal__filter--on     { background: rgba(212,165,116,.15); border-color: rgba(212,165,116,.4); color: var(--c-gold); }
+
+.gal__grid { columns: 4; column-gap: var(--sp-sm); }
+.gal__item {
+  break-inside: avoid; margin-bottom: var(--sp-sm);
+  border-radius: var(--radius-md); overflow: hidden;
+  position: relative; cursor: pointer; display: block;
+}
+.gal__item img {
+  width: 100%; height: auto; display: block;
+  transition: transform .5s var(--ease-out);
+}
+.gal__item:hover img { transform: scale(1.04); }
+
+.gal__item-overlay {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  padding: .75rem; display: flex; flex-direction: column; gap: 2px;
+  background: linear-gradient(0deg, rgba(8,8,16,.85), transparent);
+  opacity: 0; transition: opacity .3s ease;
+}
+.gal__item:hover .gal__item-overlay { opacity: 1; }
+.gal__item-cap { font-size: var(--fs-xs); color: var(--c-text); }
+.gal__item-day { font-family: var(--font-mono); font-size: var(--fs-micro); color: var(--c-gold); }
+
+/* Lightbox */
+.gal__lb {
+  position: fixed; inset: 0; z-index: 500;
+  background: rgba(0,0,0,.94); backdrop-filter: blur(20px);
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer; padding: var(--sp-sm);
+}
+.gal__lb-inner {
+  position: relative; max-width: 960px; width: 95vw;
+  border-radius: var(--radius-lg); overflow: hidden;
+  background: var(--c-bg2); cursor: default;
+}
+.gal__lb-inner img { width: 100%; max-height: 75vh; object-fit: contain; background: var(--c-bg); }
+.gal__lb-info { padding: var(--sp-sm) var(--sp-md); display: flex; justify-content: space-between; align-items: center; gap: var(--sp-sm); }
+.gal__lb-cap  { font-size: var(--fs-sm); color: var(--c-text2); }
+.gal__lb-day  { font-family: var(--font-mono); font-size: var(--fs-micro); color: var(--c-gold); }
+
+.gal__lb-close {
+  position: absolute; top: var(--sp-sm); right: var(--sp-sm);
+  width: 36px; height: 36px; border-radius: 50%; border: none;
+  background: rgba(0,0,0,.6); color: white; cursor: pointer; font-size: .9rem;
+  backdrop-filter: blur(8px);
+}
+.gal__lb-nav {
+  position: absolute; top: 50%; transform: translateY(-50%);
+  width: 44px; height: 44px; border-radius: 50%; border: 1px solid rgba(255,255,255,.2);
+  background: rgba(0,0,0,.5); color: white; cursor: pointer; font-size: 1.4rem;
+  backdrop-filter: blur(8px); transition: all .3s ease;
+}
+.gal__lb-nav:hover { background: rgba(0,0,0,.8); border-color: var(--c-gold); }
+.gal__lb-nav--prev { left: var(--sp-sm); }
+.gal__lb-nav--next { right: var(--sp-sm); }
+.gal__lb-counter {
+  position: absolute; bottom: var(--sp-sm); right: var(--sp-md);
+  font-family: var(--font-mono); font-size: var(--fs-micro); color: var(--c-text3);
+}
+
+/* ── RESPONSIVE ─────────────────────────────────────── */
+@media (max-width: 1100px) { .gal__grid { columns: 3; } }
+@media (max-width: 768px)  { .gal__grid { columns: 2; } }
+@media (max-width: 420px)  {
+  .gal__grid { columns: 1; }
+  .gal__lb-nav { width: 36px; height: 36px; font-size: 1.2rem; }
+  .gal__lb-info { flex-direction: column; align-items: flex-start; }
+  .gal__lb-cap { font-size: .8rem; }
+}
+
+/* Always show overlay on touch devices */
+@media (hover: none) {
+  .gal__item-overlay { opacity: 1 !important; }
+}
