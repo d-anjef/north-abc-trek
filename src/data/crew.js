@@ -107,7 +107,7 @@ export const CREW = [
     color: '#a8c8d8',
     profession: 'Doctor',
     hometown: 'Kathmandu',
-    instagram: 'sabin_maharjan',
+    instagram: 'sabin__maharjan',
     bio: 'Our medical safety net. Also somehow the only one who could pitch a tent properly.',
     funFact: 'medical kit was more organized than our backpacks',
   },
