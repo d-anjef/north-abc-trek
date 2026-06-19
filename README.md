@@ -257,7 +257,7 @@ This project is licensed under the **MIT License** — see the [LICENSE](./LICEN
 
 - 🌐 Website: https://www.anjef.com.np/
 - 📸 Instagram: [@anjef.dangol](https://instagram.com/anjef.dangol)
-- 💼 GitHub: [@YOUR_USERNAME](https://github.com/d-anjef)
+- 💼 GitHub: [d-anjef](https://github.com/d-anjef)
 
 ---
 
